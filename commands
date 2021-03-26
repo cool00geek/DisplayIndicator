@@ -1,3 +1,4 @@
-On | On || xrandr --output HDMI-A-0 --auto --primary --output DisplayPort-2 --auto --right-of HDMI-A-0
-On | Off || xrandr --output HDMI-A-0 --auto --primary --output DisplayPort-2 --off
-Off | On || xrandr --output HDMI-A-0 --off --output DisplayPort-2 --auto --primary
+On* | On || xrandr --output DisplayPort-1 --auto --primary --output HDMI-A-0 --auto --right-of DisplayPort-1
+On | On* || xrandr --output DisplayPort-1 --auto --output HDMI-A-0 --auto --right-of DisplayPort-1 --primary
+On* | Off || xrandr --output DisplayPort-1 --auto --primary --output HDMI-A-0 --off
+Off | On* || xrandr --output DisplayPort-1 --off --output HDMI-A-0 --auto --primary --right-of DisplayPort-1
